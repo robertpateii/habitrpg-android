@@ -469,7 +469,7 @@ public class TasksFragment extends BaseMainFragment implements OnCheckedChangeLi
         if (this.activity.filterDrawer != null && this.tagsHelper != null) {
             this.activity.filterDrawer.removeAllItems();
             this.activity.filterDrawer.addItems(
-                    new SectionDrawerItem().withName("Filter by Tag"),
+                    new SectionDrawerItem().withName("Filters and Tags"),
                     new EditTextDrawer()
             );
             for (Tag t : tagList) {

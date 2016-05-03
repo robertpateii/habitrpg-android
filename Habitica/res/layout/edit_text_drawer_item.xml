@@ -1,8 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-            <EditText
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- The goal here is to behave like the website. Selected filters will
+    persist only in the app and not be stored on the account. The setting for
+    Dailies permanently defaulting to "Due" should remain in the settings
+    section as it is on the website. (Obviously though new tags added
+    here should continue to be stored on the account.) -->
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+        <TextView
+                android:id="@+id/txtTitlevalue"
+                android:text="Habits:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp" />
+        <RadioButton android:id="@+id/radio_pirates"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="All"
+                     android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="Weak"
+                     android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas2"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="Strong"
+                     android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+        <TextView
+                android:id="@+id/txtTitlevalue"
+                android:text="Dailies:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp" />
+        <RadioButton android:id="@+id/radio_pirates"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="All"
+                     android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="Due"
+                     android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas2"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="Grey"
+                     android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+        <TextView
+                android:id="@+id/txtTitlevalue"
+                android:text="To-Dos:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp" />
+        <RadioButton android:id="@+id/radio_pirates"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="Active"
+                     android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="Dated"
+                     android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas2"
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:text="Done"
+                     android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+    <TextView
+            android:id="@+id/txtTitlevalue"
+            android:text="Tags:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <EditText
                 android:id="@+id/editText"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
@@ -11,9 +105,10 @@
                 android:hint="@string/add_tag"
                 android:inputType="text" />
         <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="+" />
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="+" />
+    </LinearLayout>
 </LinearLayout>
