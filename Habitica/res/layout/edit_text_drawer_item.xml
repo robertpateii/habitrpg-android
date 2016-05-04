@@ -25,17 +25,20 @@
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_all"/>
+                     android:text="@string/filter_all"
+                     android:onClick="onFilterAllHabitsClicked"/>
         <RadioButton android:id="@+id/filterWeakHabits"
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_weak"/>
+                     android:text="@string/filter_weak"
+                     android:onClick="onFilterWeakHabitsClicked"/>
         <RadioButton android:id="@+id/filterStrongHabits"
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_strong"/>
+                     android:text="@string/filter_strong"
+                     android:onClick="onFilterStrongHabitsClicked"/>
     </RadioGroup>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -52,17 +55,20 @@
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_all"/>
+                     android:text="@string/filter_all"
+                     android:onClick="onFilterAllDailiesClicked"/>
         <RadioButton android:id="@+id/filterDueDailies"
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_due"/>
+                     android:text="@string/filter_due"
+                     android:onClick="onFilterDueDailiesClicked"/>
         <RadioButton android:id="@+id/filterGreyDailies"
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_grey"/>
+                     android:text="@string/filter_grey"
+                     android:onClick="onFilterGreyDailiesClicked"/>
     </RadioGroup>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -79,17 +85,20 @@
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_active"/>
+                     android:text="@string/filter_active"
+                     android:onClick="onFilterActiveTodosClicked"/>
         <RadioButton android:id="@+id/filterDatedTodos"
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_dated"/>
+                     android:text="@string/filter_dated"
+                     android:onClick="onFilterDatedTodosClicked"/>
         <RadioButton android:id="@+id/filterDoneTodos"
                      android:layout_width="0dp"
                      android:layout_weight="2"
                      android:layout_height="match_parent"
-                     android:text="@string/filter_done"/>
+                     android:text="@string/filter_done"
+                     android:onClick="onFilterDoneTodosClicked"/>
     </RadioGroup>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
