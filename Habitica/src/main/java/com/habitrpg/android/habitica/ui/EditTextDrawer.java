@@ -74,6 +74,11 @@ public class EditTextDrawer extends BasePrimaryDrawerItem<EditTextDrawer, EditTe
         @Bind(R.id.filterDoneTodos)
         RadioButton filterDoneTodos;
 
+        public void onFilterDoneTodosClicked(View v) {
+            filterDoneTodos.setText("foo");
+        }
+
+
         private ViewHolder(View view) {
             super(view);
             this.view = view;
@@ -81,7 +86,11 @@ public class EditTextDrawer extends BasePrimaryDrawerItem<EditTextDrawer, EditTe
 
             ViewHelper.SetBackgroundTint(btnAdd, ContextCompat.getColor(view.getContext(), R.color.brand));
 
+            // does this mean clicking the button fires the onClick for the entire view? Which is the public void onClick below?
             btnAdd.setOnClickListener(this);
+            filterDoneTodos.setOnClickListener(this::onFilterDoneTodosClicked);
+            filterActiveTodos.setOnClickListener(this::onFilterDoneTodosClicked);
+            filterDatedTodos.setOnClickListener(this::onFilterDoneTodosClicked);
         }
 
         @Override
