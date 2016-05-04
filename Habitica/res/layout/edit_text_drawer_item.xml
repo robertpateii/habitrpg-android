@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
     android:orientation="vertical">
     <!-- The goal here is to behave like the website. Selected filters will
     persist only in the app and not be stored on the account. The setting for
     Dailies permanently defaulting to "Due" should remain in the settings
-    section as it is on the website. (Obviously though new tags added
+    section of the app as it is on the website. (Obviously though new tags added
     here should continue to be stored on the account.) -->
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -19,20 +19,21 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:textSize="25sp" />
+                android:textSize="16sp"
+                android:gravity="center"/>
         <RadioButton android:id="@+id/filterAllHabits"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_all"/>
         <RadioButton android:id="@+id/filterWeakHabits"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_weak"/>
         <RadioButton android:id="@+id/filterStrongHabits"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_strong"/>
     </RadioGroup>
@@ -45,20 +46,21 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:textSize="25sp" />
+                android:textSize="16sp"
+                android:gravity="center"/>
         <RadioButton android:id="@+id/filterAllDailies"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_all"/>
         <RadioButton android:id="@+id/filterDueDailies"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_due"/>
         <RadioButton android:id="@+id/filterGreyDailies"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_grey"/>
     </RadioGroup>
@@ -71,20 +73,21 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:textSize="25sp" />
+                android:textSize="16sp"
+                android:gravity="center"/>
         <RadioButton android:id="@+id/filterActiveTodos"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_active"/>
         <RadioButton android:id="@+id/filterDatedTodos"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_dated"/>
         <RadioButton android:id="@+id/filterDoneTodos"
                      android:layout_width="0dp"
-                     android:layout_weight="1"
+                     android:layout_weight="2"
                      android:layout_height="match_parent"
                      android:text="@string/filter_done"/>
     </RadioGroup>
@@ -92,12 +95,6 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content">
-        <TextView
-                android:text="@string/tags"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:textSize="25sp" />
         <EditText
                 android:id="@+id/editText"
                 android:layout_height="wrap_content"
