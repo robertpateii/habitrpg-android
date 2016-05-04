@@ -4,6 +4,7 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 import com.habitrpg.android.habitica.R;
 import com.habitrpg.android.habitica.events.commands.CreateTagCommand;
@@ -53,6 +54,25 @@ public class EditTextDrawer extends BasePrimaryDrawerItem<EditTextDrawer, EditTe
 
         @Bind(R.id.btnAdd)
         Button btnAdd;
+
+        @Bind(R.id.filterAllHabits)
+        RadioButton filterAllHabits;
+        @Bind(R.id.filterWeakHabits)
+        RadioButton filterWeakHabits;
+        @Bind(R.id.filterStrongHabits)
+        RadioButton filterStrongHabits;
+        @Bind(R.id.filterAllDailies)
+        RadioButton filterAllDailies;
+        @Bind(R.id.filterDueDailies)
+        RadioButton filterDueDailies;
+        @Bind(R.id.filterGreyDailies)
+        RadioButton filterGreyDailies;
+        @Bind(R.id.filterActiveTodos)
+        RadioButton filterActiveTodos;
+        @Bind(R.id.filterDatedTodos)
+        RadioButton filterDatedTodos;
+        @Bind(R.id.filterDoneTodos)
+        RadioButton filterDoneTodos;
 
         private ViewHolder(View view) {
             super(view);

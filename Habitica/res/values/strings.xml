@@ -241,6 +241,7 @@ To start, which parts of your life do you want to improve?</string>
     <string name="name">Name</string>
     <string name="description">Description</string>
     <string name="add_tag">Add Tag</string>
+    <string name="add_tag_button_text">+</string>
     <string name="privacy">Privacy</string>
     <string name="write_message">Write Message</string>
     <string name="post">Post</string>
@@ -345,4 +346,12 @@ To start, which parts of your life do you want to improve?</string>
     <string name="share_levelup" formatted="false">I got to level %s in Habitica by improving my real-life habits!</string>
     <string name="share_hatched" formatted="false">I just hatched a %1$s %2$s pet in Habitica by completing my real-life tasks!</string>
     <string name="share_raised" formatted="false">I just gained a %1$s %2$s mount in Habitica by completing my real-life tasks!</string>
+    <string name="filter_all">All</string>
+    <string name="filter_weak">Weak</string>
+    <string name="filter_strong">Strong</string>
+    <string name="filter_due">Due</string>
+    <string name="filter_grey">Grey</string>
+    <string name="filter_active">Active</string>
+    <string name="filter_dated">Dated</string>
+    <string name="filter_done">Done</string>
 </resources>
