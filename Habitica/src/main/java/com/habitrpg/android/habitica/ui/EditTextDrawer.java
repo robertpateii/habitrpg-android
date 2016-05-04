@@ -76,6 +76,23 @@ public class EditTextDrawer extends BasePrimaryDrawerItem<EditTextDrawer, EditTe
 
         public void onFilterDoneTodosClicked(View v) {
             filterDoneTodos.setText("foo");
+            /* ok now what??
+            i think i messed up i should be using a listbox preference instead of my
+            custom radio buttons that do nothing.
+            How else am I to get the fact that a filter is on over to HabitItemRecyclerViewAdapter.filter()?
+            Preference foo = new CheckBoxPreference()??
+            this is how toshevski did it
+            https://github.com/HabitRPG/habitrpg-android/pull/438/commits/154bd8c1d255e437b6af77097d1f5f2c7569d4d2
+            However that puts it in the preference drawer... which is not what vIiRuS wants...
+            so i need to ...add a second preference drawer? add something other than preferences to share the state like tags helper?
+            or extend tags helper to handle the filters?
+            so when this class is instantiated   new EditTextDrawer() tagsHelper is in that context
+            so i could pass the reference into here
+            then update the values on it based on the radio buttons
+            then add the logic for each filter to TagsHelper?
+            Should i make a FilterHelper instead of TagsHelper? it's probably better from an OO standpoint but i'm still new to this
+             */
+
         }
 
 
