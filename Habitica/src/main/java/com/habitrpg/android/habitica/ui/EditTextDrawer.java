@@ -17,8 +17,14 @@ import org.greenrobot.eventbus.EventBus;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.habitrpg.android.habitica.helpers.TagsHelper;
 
 public class EditTextDrawer extends BasePrimaryDrawerItem<EditTextDrawer, EditTextDrawer.ViewHolder> {
+    public EditTextDrawer(TagsHelper tagsHelper) {
+        this.tagsHelper = tagsHelper;
+    }
+    protected static TagsHelper tagsHelper; /// but this is instanced clasS???
+
     @Override
     public int getType() {
         return R.id.material_drawer_item_primary;
@@ -75,7 +81,8 @@ public class EditTextDrawer extends BasePrimaryDrawerItem<EditTextDrawer, EditTe
         RadioButton filterDoneTodos;
 
         public void onFilterDoneTodosClicked(View v) {
-            filterDoneTodos.setText("foo");
+            // but tags helper isn't static? or can't be???
+            tagsHelper.filterDone = true;
             /* ok now what??
             i think i messed up i should be using a listbox preference instead of my
             custom radio buttons that do nothing.

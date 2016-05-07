@@ -40,13 +40,37 @@ public class TagsHelper {
 
     public List<Task> filter(List<Task> tasks) {
         List<Task> filtered = new ArrayList<Task>();
+        List<Task> extraFiltered = new ArrayList<Task>();
         for (Task t : tasks) {
+            // take all tasks and add the ones that match all the tags in tagsId to filtered list.
             if (t.containsAllTagIds(this.tagsId)) {
                 filtered.add(t);
             }
         }
+        // input tasks matching selected tags
+        // output input less tasks that do not match selected filters
+        for (Task fTask : filtered) {
+            if (matchesFilter(fTask)) {
+                extraFiltered.add(fTask);
+            }
+        }
+        return extraFiltered;
+    }
 
-        return filtered;
+    public boolean filterDone;
+
+    private boolean matchesFilter(Task task) {
+        // check values set in this class by EditTextDrawer to see which filters to execute?
+        // i can probably get the filter logic from the website code
+        /*vliRuS:
+            weak habits are all habits with a value <= 0. Strong habits are all with a value > 0
+            dated are all todos, that are not completed and have a duedate set. Done are all completed todos
+            grey for dailies is the inverse of the due dailies
+         */
+        if (filterDone) {
+            // ??
+        }
+        return true;
     }
 
     public List<Task> filterDue(List<Task> tasks, int offset) {
