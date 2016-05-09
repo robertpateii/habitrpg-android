@@ -1,6 +1,5 @@
 package com.habitrpg.android.habitica.helpers;
 
-import android.util.Log;
 
 import com.magicmicky.habitrpgwrapper.lib.models.tasks.Task;
 
@@ -54,7 +53,6 @@ public class TagsHelper {
         List<Task> filtered = new ArrayList<Task>();
         for (Task t : tasks) {
             if (t.getType().equals(Task.TYPE_DAILY))
-            Log.i("MT:", "Task is due - " + t.isDisplayedActive(offset) + " N: " + t.getText());
             if (t.isDisplayedActive(offset))
                 filtered.add(t);
         }
